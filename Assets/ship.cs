@@ -7,7 +7,6 @@ public class ship : MonoBehaviour {
     private bool dragging = false;
     private Rigidbody2D body;
     public float speed = 10;
-    public Transform nose;
     public float maxSpeed = 200;
 
     // Use this for initialization
@@ -27,9 +26,9 @@ public class ship : MonoBehaviour {
         if (dragging)
         {
             Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
-            transform.up = body.velocity - new Vector2(nose.up.x, nose.up.y);
+            transform.up = body.velocity;
             body.AddForce(point * Time.smoothDeltaTime * speed);
+
             if (body.velocity.magnitude > maxSpeed)
             {
                 body.velocity = body.velocity.normalized * maxSpeed;
