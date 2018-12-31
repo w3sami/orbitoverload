@@ -371,6 +371,91 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6695cb2169baaec499d7491a869caedc, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &243205501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 243205502}
+  - component: {fileID: 243205505}
+  - component: {fileID: 243205504}
+  - component: {fileID: 243205503}
+  m_Layer: 0
+  m_Name: Starfield back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &243205502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243205501}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1000}
+  m_LocalScale: {x: 2000, y: 2000, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1972320449}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &243205503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243205501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d93ebe374899034898c3399a902534b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parralax: 40
+--- !u!23 &243205504
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243205501}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 1df4236870ecba548a17f91f0935d4df, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &243205505
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243205501}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &299717891
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,12 +770,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1371595561}
   - component: {fileID: 1371595566}
-  - component: {fileID: 1371595565}
   - component: {fileID: 1371595564}
-  - component: {fileID: 1371595563}
   - component: {fileID: 1371595562}
   m_Layer: 0
-  m_Name: Starfield-Front
+  m_Name: Starfield middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,18 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d93ebe374899034898c3399a902534b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parralax: 10
---- !u!114 &1371595563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1371595560}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a4b5748d3784d948982feae73773973, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  parralax: 20
 --- !u!23 &1371595564
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -767,20 +839,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1371595565
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1371595560}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1371595566
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24145,12 +24203,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1900868468}
   - component: {fileID: 1900868473}
-  - component: {fileID: 1900868472}
   - component: {fileID: 1900868471}
-  - component: {fileID: 1900868470}
   - component: {fileID: 1900868469}
   m_Layer: 0
-  m_Name: Starfield
+  m_Name: Starfield front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24167,7 +24223,7 @@ Transform:
   m_LocalScale: {x: 2000, y: 2000, z: 1}
   m_Children: []
   m_Father: {fileID: 1972320449}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1900868469
 MonoBehaviour:
@@ -24180,18 +24236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d93ebe374899034898c3399a902534b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parralax: 20
---- !u!114 &1900868470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1900868467}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a4b5748d3784d948982feae73773973, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  parralax: 10
 --- !u!23 &1900868471
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24227,20 +24272,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1900868472
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1900868467}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1900868473
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28958,8 +28989,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -495.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1900868468}
+  - {fileID: 243205502}
   - {fileID: 1371595561}
+  - {fileID: 1900868468}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
