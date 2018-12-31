@@ -14,10 +14,10 @@ MonoBehaviour:
   height: 10000
   x: 10000
   frequency: 0.01
-  minScale: 3
-  maxScale: 10
+  minScale: 0.5
+  maxScale: 0.7
   minForce: 1000
-  maxForce: 10000
+  maxForce: 5000
   heightEffect: 0.001
   spawnables:
   - {fileID: 1244460689708668, guid: fa0682f1182ae1742b7c6a3cac82736d, type: 2}
@@ -189,4 +189,4 @@ MonoBehaviour:
   - {fileID: 1691318546927298, guid: fa0682f1182ae1742b7c6a3cac82736d, type: 2}
   rerun: 0
   destroy: 0
-  maxSpawns: 1000
+  maxSpawns: 2000

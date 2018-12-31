@@ -254,6 +254,8 @@ MonoBehaviour:
   maxSpeed: 200
   tilt: 0
   tiltTime: 2
+  shipX: {fileID: 0}
+  shipY: {fileID: 0}
 --- !u!60 &219634166
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -683,6 +685,8 @@ MonoBehaviour:
   maxSpeed: 400
   tilt: 0
   tiltTime: 1
+  shipX: {fileID: 11400000, guid: 8197df52f9dcddb47bc26c51b0546c51, type: 2}
+  shipY: {fileID: 11400000, guid: ee128d7301e89bc4786dc18a89f0bd7b, type: 2}
 --- !u!54 &1110237907
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24068,7 +24072,7 @@ SpriteRenderer:
   m_Size: {x: 1000, y: 1000}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1708905694
@@ -28911,6 +28915,7 @@ GameObject:
   - component: {fileID: 1972320447}
   - component: {fileID: 1972320446}
   - component: {fileID: 1972320445}
+  - component: {fileID: 1972320450}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -28963,7 +28968,7 @@ Camera:
   far clip plane: 10000
   field of view: 60
   orthographic: 1
-  orthographic size: 400
+  orthographic size: 100
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -28995,3 +29000,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1972320450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1972320444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd248dd77ea85e46a132607968d82fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipX: {fileID: 11400000, guid: 8197df52f9dcddb47bc26c51b0546c51, type: 2}
+  shipY: {fileID: 11400000, guid: ee128d7301e89bc4786dc18a89f0bd7b, type: 2}
+  values: {fileID: 11400000, guid: fd23a6c4c92178e4599a96ccbbc289c1, type: 2}
