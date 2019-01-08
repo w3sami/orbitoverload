@@ -1,20 +1,17 @@
 fileFormatVersion: 2
-guid: 5bbc195d53b143944abb34f16c98a08f
+guid: 77e6a48cb3affcc42acebc548a40e1cf
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: unnamed
-    2100002: Testmaterial
-    2100004: Windows
-    2100006: Metal
+    2100000: Material
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cylinder
-    4300002: Cockpit
+    4300000: Cube
     7400000: Default Take
     9500000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -65,7 +62,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
     previousCalculatedGlobalScale: 10
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
