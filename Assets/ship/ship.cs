@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RoboRyanTron.Unite2017.Variables; // todo remove namespace
 
 public class ship : MonoBehaviour {
 
@@ -10,6 +11,8 @@ public class ship : MonoBehaviour {
     public float maxSpeed = 200;
     public bool tilt = false;
     public float tiltTime = 2f;
+    public FloatVariable shipX;
+    public FloatVariable shipY;
 
     // Use this for initialization
     void Start () {
@@ -21,8 +24,6 @@ public class ship : MonoBehaviour {
         dragging = true;
     }
 
-
-        // Update is called once per frame
     void FixedUpdate()
     {
         if (!tilt && Input.GetMouseButtonDown(0))
@@ -46,8 +47,8 @@ public class ship : MonoBehaviour {
         {
             dragging = false;
         }
-        Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
-
+        shipX.SetValue(transform.position.x);
+        shipY.SetValue(transform.position.y);
     }
 
     void OnCollisionEnter()
