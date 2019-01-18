@@ -1,17 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GrinderScript : MonoBehaviour {
 
     // ADDED FROM PROTOTYPE
     //public ShipController shipScript;
-    
-	void Start () {
-		
-	}
+    public Text JunkRemainsText;
+
+    private int maxdebris = 2000;
 	
-	void Update () {
+    void Start () {
+        //var o = GameObject.FindGameObjectsWithTag("Debris");
+        //maxdebris = o.Length;
+    }
+
+    void Update () {
 		
 	}
 
@@ -30,6 +35,9 @@ public class GrinderScript : MonoBehaviour {
         //shipScript.AddScrap(10);
 
         Destroy(junk);
+        var o = GameObject.FindGameObjectsWithTag("Debris");
+        float left = o.Length;
+        JunkRemainsText.text = (left*100 / maxdebris).ToString() + "% junk remaining";
     }
 
 }
