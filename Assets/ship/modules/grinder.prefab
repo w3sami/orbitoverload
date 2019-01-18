@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 23268489017121276}
   - component: {fileID: 95092647454510968}
   - component: {fileID: 65753217987536810}
-  m_Layer: 0
+  - component: {fileID: 114423845602293534}
+  m_Layer: 8
   m_Name: grinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1119648003167804}
   m_LocalRotation: {x: -1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -35.374374, y: 23.09513, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 27.57, z: 0}
+  m_LocalScale: {x: 2.41, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -92,11 +93,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1119648003167804}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 21.429531, y: 19.70425, z: 20.060139}
-  m_Center: {x: 0.8774247, y: 0.014544964, z: 1.7653193}
+  m_Size: {x: 19.7, y: 22.4, z: 63.3}
+  m_Center: {x: -0.3, y: 0, z: 0}
 --- !u!95 &95092647454510968
 Animator:
   serializedVersion: 3
@@ -115,3 +116,14 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114423845602293534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1119648003167804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8565de13e5c0a4148a0be8cdd9621d2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
