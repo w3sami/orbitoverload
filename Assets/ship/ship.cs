@@ -64,4 +64,9 @@ public class ship : MonoBehaviour {
         yield return new WaitForSeconds(tiltTime);
         tilt = false;
     }
+
+    public void OnShipDestroyed()
+    {
+        this.enabled = false;
+    }
 }
