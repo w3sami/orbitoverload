@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4769657882988130}
   - component: {fileID: 33415344986131520}
   - component: {fileID: 23268489017121276}
-  - component: {fileID: 95092647454510968}
   - component: {fileID: 65753217987536810}
   - component: {fileID: 114423845602293534}
+  - component: {fileID: 65602766057464232}
+  - component: {fileID: 65372513035983422}
   m_Layer: 8
   m_Name: grinder
   m_TagString: Untagged
@@ -38,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1119648003167804}
   m_LocalRotation: {x: -1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 27.57, z: 0}
-  m_LocalScale: {x: 2.41, y: 1, z: 1}
+  m_LocalPosition: {x: 1, y: 27.29, z: 0}
+  m_LocalScale: {x: 3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -86,6 +87,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1119648003167804}
   m_Mesh: {fileID: 4300000, guid: 77e6a48cb3affcc42acebc548a40e1cf, type: 3}
+--- !u!65 &65372513035983422
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1119648003167804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 17.33, z: 20.060139}
+  m_Center: {x: -9.86, y: 2.3, z: 1.7653193}
+--- !u!65 &65602766057464232
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1119648003167804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 17.33, z: 20.060139}
+  m_Center: {x: 9.19, y: 2.3, z: 1.7653193}
 --- !u!65 &65753217987536810
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -96,26 +121,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 19.7, y: 22.4, z: 63.3}
+  m_Size: {x: 17.13, y: 13.3, z: 63.3}
   m_Center: {x: -0.3, y: 0, z: 0}
---- !u!95 &95092647454510968
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1119648003167804}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 77e6a48cb3affcc42acebc548a40e1cf, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114423845602293534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,3 +134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8565de13e5c0a4148a0be8cdd9621d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrapStored: {fileID: 11400000, guid: daa44228d45ef8c458800e9e9cf35c0e, type: 2}
+  totalStorage: {fileID: 11400000, guid: 84e56fd39cd9c4d4ba5282fa73029342, type: 2}
+  scrapGrabbed: {fileID: 11400000, guid: e1ff48b4bec95664ea99e21bfdadb865, type: 2}
