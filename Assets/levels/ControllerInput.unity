@@ -1011,7 +1011,7 @@ GameObject:
   - component: {fileID: 342069130}
   m_Layer: 8
   m_Name: grinder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1045,7 +1045,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &342069131
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5899,7 +5899,7 @@ GameObject:
   - component: {fileID: 426115907}
   m_Layer: 0
   m_Name: ship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6065,7 +6065,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &448364194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7102,7 +7102,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &848311168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12261,7 +12261,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &1143216327
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13303,7 +13303,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1534715886
 MonoBehaviour:
   m_ObjectHideFlags: 0
