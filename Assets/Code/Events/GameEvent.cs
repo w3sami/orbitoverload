@@ -21,8 +21,14 @@ namespace RoboRyanTron.Unite2017.Events
 
         public void Raise()
         {
-            for(int i = eventListeners.Count -1; i >= 0; i--)
+            for (int i = eventListeners.Count - 1; i >= 0; i--)
                 eventListeners[i].OnEventRaised();
+        }
+
+        public void Raise(object[] parameters)
+        {
+            for (int i = eventListeners.Count - 1; i >= 0; i--)
+                eventListeners[i].OnEventRaised(parameters);
         }
 
         public void RegisterListener(GameEventListener listener)

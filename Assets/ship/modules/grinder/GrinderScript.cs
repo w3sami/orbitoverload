@@ -6,8 +6,6 @@ using RoboRyanTron.Unite2017.Events;
 using RoboRyanTron.Unite2017.Variables;
 
 public class GrinderScript : MonoBehaviour {
-
-    
     
 
     public FloatVariable scrapStored;
@@ -17,35 +15,19 @@ public class GrinderScript : MonoBehaviour {
     
     private int maxdebris = 2000;
 	
-    void Start () {
-        
-        // TODO: This might be better elsewhere
-        scrapStored.SetValue(0);
-    }
-
-    void Update () {
-		
-	}
-
     private void OnTriggerStay(Collider other)
     {
         Collider[] colliders = Physics.OverlapSphere(other.transform.position, 0.0f, LayerMask.GetMask("Grinders"), QueryTriggerInteraction.Collide);
-        if (colliders.Length > 0 && scrapStored.Value < totalStorage.Value)
+        if (colliders.Length > 0)// && scrapStored.Value < totalStorage.Value)
         {
-            GrindJunk(other.gameObject);
+            GrindJunk(other.gameObject, other.GetComponent<Minerals>().minerals);
         }
     }
 
-    private void GrindJunk(GameObject junk)
+    private void GrindJunk(GameObject junk, Mineral[] minerals)
     {
-
         Destroy(junk);
-
-        scrapStored.Value += 7;
-        if (scrapStored.Value > totalStorage.Value) scrapStored.Value = totalStorage.Value;
-
-        scrapGrabbed.Raise();
-
+        scrapGrabbed.Raise(minerals);
     }
 
 }

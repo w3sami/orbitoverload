@@ -7,41 +7,20 @@ using UnityEngine.UI;
 
 public class JunkRemainingMonitor : MonoBehaviour {
 
-    public spawnValues SatelliteValues;
-
     public Text text;
+    private int debriscount = 0;
 
-    //private int previousCount;
-    //private int maxSpawns;
-
-	void Start () {
-        //previousCount = maxSpawns = SatelliteValues.maxSpawns;
-        //UpdateText();
-	}
-	
-	void Update () {
-        
-        /*
-        if (previousCount != SatelliteValues.spawnables.Length)
-        {
-            previousCount = SatelliteValues.spawnables.Length;
-            UpdateText();
-        }*/
-    }
-
-    private void UpdateText()
+    // Called from GameEventListener component
+    public void OnSatelliteSpawned()
     {
-        //int percentage = SatelliteValues.spawnables.Length*100 / maxSpawns;
-        //text.text = percentage + "% junk remaining";
+        debriscount++;
+        text.text = "Debris: " + debriscount;
     }
 
-    
     // Called from GameEventListener component
     public void OnJunkRemoved()
     {
-        int debriscount = GameObject.FindGameObjectsWithTag("Debris").Length;
+        debriscount--;
         text.text = "Debris: " + debriscount;
-        
-        //text.text = "Debris: " + SatelliteValues.maxSpawns;
     }
 }

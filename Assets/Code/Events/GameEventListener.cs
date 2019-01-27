@@ -17,6 +17,7 @@ namespace RoboRyanTron.Unite2017.Events
 
         [Tooltip("Response to invoke when Event is raised.")]
         public UnityEvent Response;
+        public ParameterGameEvent ParameteResponse;
 
         private void OnEnable()
         {
@@ -31,6 +32,11 @@ namespace RoboRyanTron.Unite2017.Events
         public void OnEventRaised()
         {
             Response.Invoke();
+        }
+
+        public void OnEventRaised(object[] parameters)
+        {
+            ParameteResponse.Invoke(parameters);
         }
     }
 }

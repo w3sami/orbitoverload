@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using RoboRyanTron.Unite2017.Events;
 
 public class spawn : MonoBehaviour {
     public bool rerun = false;
     public bool destroy = false;
     private int maxSpawns;
     public spawnValues values;
+    public GameEvent satelliteSpawned;
     private List<spawnable> spawns = new List<spawnable>();
 
 
@@ -32,11 +34,18 @@ public class spawn : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        var prices = new float[4] { Random.Range(0.1f, 50f), Random.Range(0.1f, 50f), Random.Range(0.1f, 50f), Random.Range(0.1f, 50f) };
         for (var l = 0; l < values.spawnables.Length - 1; l++)
         {
             GameObject spawned = values.spawnables[l];
             var size = Vector3.Magnitude(spawned.GetComponent<Renderer>().bounds.size);
-            spawns.Add(new spawnable(spawned, size, 2000f / size));
+            var mCount = Random.Range(1, 5);
+            var minerals = new Mineral[mCount];
+            for (var i = 0; i < mCount; i++)
+            {
+                minerals[i] = new Mineral("mineral" + (i + 1), Random.Range(0.1f, 5f) * size / 4, prices[i]);
+            }
+            spawns.Add(new spawnable(spawned, size, 2000f / size, minerals));
         }
 
         // not used atm just normalizing the sizes to about same for all
@@ -84,10 +93,13 @@ public class spawn : MonoBehaviour {
             return;
         }
         maxSpawns--;
+        satelliteSpawned.Raise();
 
         var heightMultiplier = y * values.heightEffect;
         var s = spawns[Random.Range(0, spawns.Count)];
         var spawned = Instantiate(s.go);
+        spawned.AddComponent<Minerals>();
+        spawned.GetComponent<Minerals>().minerals = s.Minerals;
         spawned.tag = "Debris";
         var scale = Random.Range(values.minScale, values.maxScale) * heightMultiplier * s.sizeNormalized ;
         spawned.transform.localScale = Vector3.one * scale;

@@ -16,8 +16,8 @@ TagManager:
   - 
   - 
   - Grinders
-  - 
-  - 
+  - bg
+  - top
   - 
   - 
   - 
@@ -42,4 +42,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: top
+    uniqueID: 814303005
     locked: 0
