@@ -1,0 +1,12 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Demo",
+"dataUrl": "build1028-31-12b.data.unityweb",
+"wasmCodeUrl": "build1028-31-12b.wasm.code.unityweb",
+"wasmFrameworkUrl": "build1028-31-12b.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
