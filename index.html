@@ -46,7 +46,7 @@
 
       <a href="builds/build2018-12-29/" target="_blank">
         <div>
-          <img onclick="imgSize(this); return false;" src="builds/build2018-12-29/screenshot.png" />
+          <img onclick="return imgSize(this); return false;" src="builds/build2018-12-29/screenshot.png" />
           <ul>
             <li><h3>Build 2018-12-29</h3></li>
             <li>Early days</li>
@@ -60,7 +60,7 @@
 
       <a href="builds/build2018-12-31/" target="_blank">
         <div>
-          <img onclick="imgSize(this); return false;" src="builds/build2018-12-31/screenshot.png" />
+          <img onclick="return imgSize(this); return false;" src="builds/build2018-12-31/screenshot.png" />
           <ul>
             <li><h3>Build 2018-12-31</h3></li>
             <li>Satellite pieces</li>
@@ -72,7 +72,7 @@
 
       <a href="builds/build2018-12-31b/" target="_blank">
         <div>
-          <img onclick="imgSize(this); return false;" src="builds/build2018-12-31b/screenshot.png" />
+          <img onclick="return imgSize(this); return false;" src="builds/build2018-12-31b/screenshot.png" />
           <ul>
             <li><h3>Build 2018-12-31b</h3></li>
             <li>Better sizing of satellite pieces</li>
@@ -85,7 +85,7 @@
 
       <a href="builds/build2019-01-24/" target="_blank">
         <div>
-          <img onclick="imgSize(this); return false;" src="builds/build2019-01-24/screenshot.png" />
+          <img onclick="return imgSize(this); return false;" src="builds/build2019-01-24/screenshot.png" />
           <ul>
             <li><h3>Build 2019-01-24</h3></li>
             <li>Ship built by modules</li>
@@ -99,7 +99,7 @@
 
       <a href="builds/build2019-01-27/" target="_blank">
         <div>
-          <img onclick="imgSize(this); return false;" src="builds/build2019-01-27/screenshot.png" />
+          <img onclick="return imgSize(this); return false;" src="builds/build2019-01-27/screenshot.png" />
           <ul>
             <li><h3>Build 2019-01-27</h3></li>
             <li>Fuel and turbo meters + Minimap / compass (pointing to the base for now.)</li>
@@ -115,7 +115,7 @@
 
       <a href="builds/build2019-02-05/" target="_blank">
         <div>
-          <img onclick="imgSize(this); return false;" src="builds/build2019-02-05/screenshot.png" />
+          <img onclick="return imgSize(this)" src="builds/build2019-02-05/screenshot.png" />
           <ul>
             <li><h3>Build 2019-02-05</h3></li>
             <li>Adjustable thursters, activate by pressing to the direction they are installed to</li>
@@ -130,12 +130,14 @@
   function imgSize(img) {
       var style = img.style;
       if (style.width === 'auto') {
+return true;
          // style.width = '30%';
          // style.maxWidth = '250px';
       } else {
           style.width = 'auto';
           style.maxWidth = '100%';
       }
+return false;
   }
 </script>
 </body>
