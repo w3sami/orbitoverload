@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1"/>
+  <meta name="description" content="Orbit overload is a game about cleaning up the space around our planet" />
+  <meta name="keywords" content="Orbit overload, clean up, space junkee, space junk" />
+  <title>Orbit overload the game</title>
+  <link href="/css/orbit.css" rel="stylesheet" />
+  <link href="/css/starWars.css" rel="stylesheet" />
+</head>
+<body>
+<section class="title">
+  <img src="/img/orbit.jpg" />
+  <div class="fade">
+    <img src="/img/orbit.jpg" />
+  </div>
+
+  <div class="scroll">
+
+    <div class="crawl">
+
+      <div class="title">
+        <p>&nbsp;</p>
+        <h1>We are in trouble!!</h1>
+      </div>
+
+      <p>xThe earth's orbit has been polluted by debris. You must clear up the space above us!</p>
+      <p>But before we can get to that, we actually have to finish the game :)</p>
+      <p>If you are interested in following the progress, you've come to the right place.</p>
+      <p>Below you can find our inspiration for the game, our behind the scene vlogs and the playable previews</p>
+
+    </div>
+
+  </div>
+</section>
+<section class="content">
+  <h1>Inspiration for the game</h1>
+  <section class="inspiration">
+    <iframe src="https://www.youtube.com/embed/yS1ibDImAYU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <a href="http://stuffin.space/?intldes=1999-042A" title="Stuff in space"><img src="/img/stuffinspace.jpg" /></a>
+  </section>
+  <section class="demos">
+    <h1>Demo builds</h1>
+      <a href="/builds/build2018-27-12/" target="_blank">
+        <div>
+          <img onclick="imgSize(this); return false;" src="/builds/build2018-27-12/screenshot.png" />
+          <ul>
+            <li><h3>Build 2018-27-12</h3></li>
+            <li>Map circle, having a compass pointing to the base for now.</li>
+            <li>Material slots</li>
+            <li>Space for thrust + a direction. Z for turbo. Works better with a controller</li>
+            <li>Return to base to refuel and release collected materials</li>
+          </ul>
+          <span class="clear"></span>
+        </div>
+      </a>
+  </section>
+</section>
+<script>
+  function imgSize(img) {
+      var style = img.style;
+      if (style.width === 'auto') {
+         // style.width = '30%';
+         // style.maxWidth = '250px';
+      } else {
+          style.width = 'auto';
+          style.maxWidth = '100%';
+      }
+  }
+</script>
+</body>

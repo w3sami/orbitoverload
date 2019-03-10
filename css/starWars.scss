@@ -1,0 +1,59 @@
+.title {
+    overflow: hidden;
+    position: relative;
+    .fade {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        img {
+            width: 100%;
+            -webkit-mask-image:-webkit-gradient(linear, left 40%, left 60%, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+        }
+    }
+
+    .scroll {
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 800px;
+        color: white;
+        font-family: 'Pathway Gothic One', sans-serif;
+        font-size: 500%;
+        font-weight: 600;
+        letter-spacing: 6px;
+        line-height: 150%;
+        perspective: 400px;
+        text-align: justify;
+    }
+
+    .crawl {
+        position: relative;
+        top: 9999px;
+        transform-origin: 50% 100%;
+        animation: crawl 120s linear;
+    }
+
+    .crawl > .title {
+        font-size: 90%;
+        text-align: center;
+    }
+
+    .crawl > .title h1 {
+        margin: 0 0 100px;
+        text-transform: uppercase;
+    }
+
+    @keyframes crawl {
+        0% {
+            top: 0;
+            transform: rotateX(20deg) translateZ(0);
+        }
+        100% {
+            top: -6000px;
+            transform: rotateX(25deg) translateZ(-2500px);
+        }
+    }
+}
